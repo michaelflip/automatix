@@ -21,8 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'la#)%*-u4*c$sr^mu#!8=070e8t-@cf+ym46gdty82waxnxv$k'
+# SECURITY WARNING: keep the secret key used in production secret!
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -133,7 +133,7 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_S3_HOST = 's3-us-west-1.amazonaws.com'
 
 db_from_env = dj_database_url.config()
